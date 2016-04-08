@@ -1,0 +1,709 @@
+Release 14.4 - xst P.49d (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: pipelined_regfile_4stage.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "pipelined_regfile_4stage.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "pipelined_regfile_4stage"
+Output Format                      : NGC
+Target Device                      : xc6slx4-3-csg225
+
+---- Source Options
+Top Module Name                    : pipelined_regfile_4stage
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\jwong048\Desktop\CZ3001_Project\regfile.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <regfile>.
+Analyzing Verilog file "C:\Users\jwong048\Desktop\CZ3001_Project\PC.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <PC1>.
+Analyzing Verilog file "C:\Users\jwong048\Desktop\CZ3001_Project\MEM_WB_stage.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <MEM_WB_stage>.
+Analyzing Verilog file "C:\Users\jwong048\Desktop\CZ3001_Project\memory.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <memory>.
+Analyzing Verilog file "C:\Users\jwong048\Desktop\CZ3001_Project\ID_EXEstage.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <ID_EXE_stage>.
+Analyzing Verilog file "C:\Users\jwong048\Desktop\CZ3001_Project\EX_MEM_stage.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <EX_MEM_stage>.
+Analyzing Verilog file "C:\Users\jwong048\Desktop\CZ3001_Project\dmemory.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <dmemory>.
+Analyzing Verilog file "C:\Users\jwong048\Desktop\CZ3001_Project\control.v" into library work
+Parsing verilog file "define.v" included at line 3.
+Parsing module <control>.
+Analyzing Verilog file "C:\Users\jwong048\Desktop\CZ3001_Project\alu.v" into library work
+Parsing verilog file "define.v" included at line 1.
+Parsing module <alu>.
+Analyzing Verilog file "C:\Users\jwong048\Desktop\CZ3001_Project\pipelined_regfile_4stage.v" into library work
+Parsing verilog file "define.v" included at line 2.
+Parsing module <pipelined_regfile_4stage>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <pipelined_regfile_4stage>.
+WARNING:HDLCompiler:1127 - "C:\Users\jwong048\Desktop\CZ3001_Project\pipelined_regfile_4stage.v" Line 123: Assignment to pcsrc ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\jwong048\Desktop\CZ3001_Project\pipelined_regfile_4stage.v" Line 130: Assignment to res ignored, since the identifier is never used
+
+Elaborating module <PC1>.
+
+Elaborating module <memory>.
+WARNING:HDLCompiler:295 - "C:\Users\jwong048\Desktop\CZ3001_Project\memory.v" Line 37: case condition never applies
+"C:\Users\jwong048\Desktop\CZ3001_Project\memory.v" Line 40. $write Opening Fileid 0\n
+WARNING:HDLCompiler:816 - "C:\Users\jwong048\Desktop\CZ3001_Project\memory.v" Line 42: System function call feof not supported
+WARNING:HDLCompiler:817 - "C:\Users\jwong048\Desktop\CZ3001_Project\memory.v" Line 55: System task fclose ignored for synthesis
+
+Elaborating module <dmemory>.
+WARNING:HDLCompiler:295 - "C:\Users\jwong048\Desktop\CZ3001_Project\dmemory.v" Line 57: case condition never applies
+"C:\Users\jwong048\Desktop\CZ3001_Project\dmemory.v" Line 59. $write Opening Fileid 0\n
+WARNING:HDLCompiler:816 - "C:\Users\jwong048\Desktop\CZ3001_Project\dmemory.v" Line 61: System function call feof not supported
+WARNING:HDLCompiler:817 - "C:\Users\jwong048\Desktop\CZ3001_Project\dmemory.v" Line 74: System task fclose ignored for synthesis
+
+Elaborating module <control>.
+
+Elaborating module <regfile>.
+
+Elaborating module <ID_EXE_stage>.
+
+Elaborating module <alu>.
+
+Elaborating module <EX_MEM_stage>.
+
+Elaborating module <MEM_WB_stage>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <pipelined_regfile_4stage>.
+    Related source file is "C:\Users\jwong048\Desktop\CZ3001_Project\pipelined_regfile_4stage.v".
+    Found 32-bit adder for signal <PCIN> created at line 140.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Multiplexer(s).
+Unit <pipelined_regfile_4stage> synthesized.
+
+Synthesizing Unit <PC1>.
+    Related source file is "C:\Users\jwong048\Desktop\CZ3001_Project\PC.v".
+    Found 32-bit register for signal <currPC>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <PC1> synthesized.
+
+Synthesizing Unit <memory>.
+    Related source file is "C:\Users\jwong048\Desktop\CZ3001_Project\memory.v".
+WARNING:Xst:647 - Input <fileid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1024x32-bit dual-port RAM <Mram_memory> for signal <memory>.
+    Found 10-bit register for signal <addr_r<9:0>>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  10 D-type flip-flop(s).
+Unit <memory> synthesized.
+
+Synthesizing Unit <dmemory>.
+    Related source file is "C:\Users\jwong048\Desktop\CZ3001_Project\dmemory.v".
+WARNING:Xst:647 - Input <fileid> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1024x32-bit dual-port RAM <Mram_memory> for signal <memory>.
+    Found 10-bit register for signal <addr_r<9:0>>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  10 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <dmemory> synthesized.
+
+Synthesizing Unit <control>.
+    Related source file is "C:\Users\jwong048\Desktop\CZ3001_Project\control.v".
+    Summary:
+	inferred   3 Multiplexer(s).
+Unit <control> synthesized.
+
+Synthesizing Unit <regfile>.
+    Related source file is "C:\Users\jwong048\Desktop\CZ3001_Project\regfile.v".
+    Found 1024-bit register for signal <n0052>.
+    Found 32-bit 32-to-1 multiplexer for signal <waddr[4]_regdata[31][31]_wide_mux_2_OUT> created at line 46.
+    Found 32-bit 32-to-1 multiplexer for signal <raddr1[4]_regdata[31][31]_wide_mux_40_OUT> created at line 49.
+    Found 32-bit 32-to-1 multiplexer for signal <raddr2[4]_regdata[31][31]_wide_mux_43_OUT> created at line 51.
+    Found 5-bit comparator equal for signal <waddr[4]_raddr1[4]_equal_40_o> created at line 49
+    Found 5-bit comparator equal for signal <waddr[4]_raddr2[4]_equal_43_o> created at line 51
+    Summary:
+	inferred 1024 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred  38 Multiplexer(s).
+Unit <regfile> synthesized.
+
+Synthesizing Unit <ID_EXE_stage>.
+    Related source file is "C:\Users\jwong048\Desktop\CZ3001_Project\ID_EXEstage.v".
+    Found 32-bit register for signal <rdata1_out_ID_EXE>.
+    Found 32-bit register for signal <rdata2_out_ID_EXE>.
+    Found 32-bit register for signal <imm_out_ID_EXE>.
+    Found 3-bit register for signal <opcode_out_ID_EXE>.
+    Found 1-bit register for signal <alusrc_out_ID_EXE>.
+    Found 1-bit register for signal <memWrite_out_ID_EXE>.
+    Found 1-bit register for signal <memRead_out_ID_EXE>.
+    Found 1-bit register for signal <memToReg_out_ID_EXE>.
+    Found 1-bit register for signal <WriteEn_out_ID_EXE>.
+    Found 1-bit register for signal <branch_out_ID_EXE>.
+    Found 32-bit register for signal <npc_out_ID_EXE>.
+    Found 5-bit register for signal <waddr_out_ID_EXE>.
+    Summary:
+	inferred 142 D-type flip-flop(s).
+Unit <ID_EXE_stage> synthesized.
+
+Synthesizing Unit <alu>.
+    Related source file is "C:\Users\jwong048\Desktop\CZ3001_Project\alu.v".
+    Found 32-bit subtractor for signal <a[31]_b[31]_sub_2_OUT> created at line 25.
+    Found 32-bit adder for signal <a[31]_b[31]_add_6_OUT> created at line 30.
+    Found 32x32-bit multiplier for signal <n0016> created at line 29.
+    Found 32-bit 8-to-1 multiplexer for signal <out> created at line 23.
+    Found 32-bit comparator lessequal for signal <n0003> created at line 28
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <alu> synthesized.
+
+Synthesizing Unit <EX_MEM_stage>.
+    Related source file is "C:\Users\jwong048\Desktop\CZ3001_Project\EX_MEM_stage.v".
+    Found 32-bit register for signal <rdata2_out_EX_MEM>.
+    Found 32-bit register for signal <alu_result_out_EX_MEM>.
+    Found 1-bit register for signal <memWrite_out_EX_MEM>.
+    Found 1-bit register for signal <memRead_out_EX_MEM>.
+    Found 1-bit register for signal <memToReg_out_EX_MEM>.
+    Found 1-bit register for signal <WriteEn_out_EX_MEM>.
+    Found 5-bit register for signal <waddr_out_EX_MEM>.
+    Summary:
+	inferred  73 D-type flip-flop(s).
+Unit <EX_MEM_stage> synthesized.
+
+Synthesizing Unit <MEM_WB_stage>.
+    Related source file is "C:\Users\jwong048\Desktop\CZ3001_Project\MEM_WB_stage.v".
+    Found 5-bit register for signal <waddr_out>.
+    Found 1-bit register for signal <memToReg_out>.
+    Found 1-bit register for signal <WriteEn_out>.
+    Found 32-bit register for signal <alu_result_out>.
+    Summary:
+	inferred  39 D-type flip-flop(s).
+Unit <MEM_WB_stage> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 1024x32-bit dual-port RAM                             : 2
+# Multipliers                                          : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 1
+# Registers                                            : 27
+ 1-bit register                                        : 12
+ 10-bit register                                       : 2
+ 1024-bit register                                     : 1
+ 3-bit register                                        : 1
+ 32-bit register                                       : 8
+ 5-bit register                                        : 3
+# Comparators                                          : 3
+ 32-bit comparator lessequal                           : 1
+ 5-bit comparator equal                                : 2
+# Multiplexers                                         : 47
+ 1-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 3
+ 32-bit 2-to-1 multiplexer                             : 38
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 8-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1710 - FF/Latch <memWrite_out_ID_EXE> (without init value) has a constant value of 0 in block <PIPE1>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <memWrite_out_EX_MEM> (without init value) has a constant value of 0 in block <PIPE2>. This FF/Latch will be trimmed during the optimization process.
+
+Synthesizing (advanced) Unit <memory>.
+INFO:Xst:3226 - The RAM <Mram_memory> will be implemented as a BLOCK RAM, absorbing the following register(s): <addr_r>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <memory> synthesized (advanced).
+
+Synthesizing (advanced) Unit <pipelined_regfile_4stage>.
+The following registers are absorbed into counter <pc/currPC>: 1 register on signal <pc/currPC>.
+INFO:Xst:3226 - The RAM <dm/Mram_memory> will be implemented as a BLOCK RAM, absorbing the following register(s): <dm/addr_r>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <alu_result_EX_MEM<9:0>> |          |
+    |     diA            | connected to signal <rdata2_EX_MEM> |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <pipelined_regfile_4stage> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 1024x32-bit single-port block RAM                     : 2
+# Multipliers                                          : 1
+ 32x32-bit multiplier                                  : 1
+# Adders/Subtractors                                   : 3
+ 32-bit adder                                          : 2
+ 32-bit subtractor                                     : 1
+# Counters                                             : 1
+ 32-bit up counter                                     : 1
+# Registers                                            : 1278
+ Flip-Flops                                            : 1278
+# Comparators                                          : 3
+ 32-bit comparator lessequal                           : 1
+ 5-bit comparator equal                                : 2
+# Multiplexers                                         : 47
+ 1-bit 2-to-1 multiplexer                              : 1
+ 3-bit 2-to-1 multiplexer                              : 3
+ 32-bit 2-to-1 multiplexer                             : 38
+ 32-bit 32-to-1 multiplexer                            : 3
+ 32-bit 8-to-1 multiplexer                             : 1
+ 5-bit 2-to-1 multiplexer                              : 1
+# Xors                                                 : 1
+ 32-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <imm_out_ID_EXE_15> in Unit <ID_EXE_stage> is equivalent to the following 16 FFs/Latches, which will be removed : <imm_out_ID_EXE_16> <imm_out_ID_EXE_17> <imm_out_ID_EXE_18> <imm_out_ID_EXE_19> <imm_out_ID_EXE_20> <imm_out_ID_EXE_21> <imm_out_ID_EXE_22> <imm_out_ID_EXE_23> <imm_out_ID_EXE_24> <imm_out_ID_EXE_25> <imm_out_ID_EXE_26> <imm_out_ID_EXE_27> <imm_out_ID_EXE_28> <imm_out_ID_EXE_29> <imm_out_ID_EXE_30> <imm_out_ID_EXE_31> 
+WARNING:Xst:2677 - Node <Mmult_n00163> of sequential type is unconnected in block <alu>.
+
+Optimizing unit <ID_EXE_stage> ...
+
+Optimizing unit <MEM_WB_stage> ...
+
+Optimizing unit <pipelined_regfile_4stage> ...
+
+Optimizing unit <regfile> ...
+
+Optimizing unit <alu> ...
+WARNING:Xst:1710 - FF/Latch <PIPE1/memWrite_out_ID_EXE> (without init value) has a constant value of 0 in block <pipelined_regfile_4stage>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <PIPE2/memWrite_out_EX_MEM> (without init value) has a constant value of 0 in block <pipelined_regfile_4stage>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <pc/currPC_10> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_10> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_11> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_11> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_12> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_12> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_13> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_13> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_14> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_14> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_20> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_20> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_15> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_15> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_21> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_21> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_16> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_16> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_22> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_22> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_17> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_17> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_23> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_23> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_18> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_18> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_24> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_24> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_19> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_19> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_30> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_30> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_25> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_25> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_31> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_31> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_26> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_26> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_27> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_27> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_10> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_10> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_28> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_28> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_11> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_11> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_29> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_29> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_12> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_12> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_13> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_13> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_14> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_14> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_20> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_20> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_15> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_15> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_21> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_21> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_16> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_16> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_22> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_22> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_17> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_17> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_23> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_23> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_18> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_18> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_24> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_24> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_19> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_19> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_30> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_30> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_25> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_25> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_31> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_31> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_26> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_26> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_27> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_27> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_28> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_28> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_29> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_29> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_0> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_0> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_1> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_1> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_2> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_2> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_3> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_3> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_4> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_4> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_5> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_5> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_6> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_6> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_7> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_7> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_8> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_8> 
+INFO:Xst:2261 - The FF/Latch <pc/currPC_9> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/npc_out_ID_EXE_9> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_0> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_0> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_1> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_1> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_2> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_2> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_3> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_3> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_4> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_4> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_5> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_5> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_6> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_6> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_7> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_7> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_8> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_8> 
+INFO:Xst:2261 - The FF/Latch <PIPE2/rdata2_out_EX_MEM_9> in Unit <pipelined_regfile_4stage> is equivalent to the following FF/Latch, which will be removed : <PIPE1/rdata2_out_ID_EXE_9> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block pipelined_regfile_4stage, actual ratio is 137.
+Optimizing block <pipelined_regfile_4stage> to meet ratio 100 (+ 5) of 600 slices :
+WARNING:Xst:2254 - Area constraint could not be met for block <pipelined_regfile_4stage>, final ratio is 140.
+FlipFlop PIPE1/alusrc_out_ID_EXE has been replicated 1 time(s)
+FlipFlop PIPE1/imm_out_ID_EXE_15 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 1230
+ Flip-Flops                                            : 1230
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : pipelined_regfile_4stage.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 2696
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 31
+#      LUT2                        : 32
+#      LUT3                        : 33
+#      LUT4                        : 128
+#      LUT5                        : 1060
+#      LUT6                        : 1108
+#      MUXCY                       : 108
+#      MUXF7                       : 97
+#      VCC                         : 1
+#      XORCY                       : 96
+# FlipFlops/Latches                : 1230
+#      FDR                         : 1227
+#      FDS                         : 3
+# RAMS                             : 4
+#      RAMB16BWER                  : 4
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 517
+#      IBUF                        : 1
+#      OBUF                        : 516
+# DSPs                             : 3
+#      DSP48A1                     : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx4csg225-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            1230  out of   4800    25%  
+ Number of Slice LUTs:                 2393  out of   2400    99%  
+    Number used as Logic:              2393  out of   2400    99%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   2471
+   Number with an unused Flip Flop:    1241  out of   2471    50%  
+   Number with an unused LUT:            78  out of   2471     3%  
+   Number of fully used LUT-FF pairs:  1152  out of   2471    46%  
+   Number of unique control sets:         1
+
+IO Utilization: 
+ Number of IOs:                         522
+ Number of bonded IOBs:                 518  out of    132   392% (*) 
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                4  out of     12    33%  
+    Number using Block RAM only:          4
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+ Number of DSP48A1s:                      3  out of      8    37%  
+
+WARNING:Xst:1336 -  (*) More than 100% of Device resources are used
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 1237  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 13.677ns (Maximum Frequency: 73.118MHz)
+   Minimum input arrival time before clock: 3.915ns
+   Maximum output required time after clock: 19.069ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 13.677ns (frequency: 73.118MHz)
+  Total number of paths / destination ports: 1881779 / 1351
+-------------------------------------------------------------------------
+Delay:               13.677ns (Levels of Logic = 5)
+  Source:            PIPE1/alusrc_out_ID_EXE_1 (FF)
+  Destination:       PIPE2/alu_result_out_EX_MEM_17 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: PIPE1/alusrc_out_ID_EXE_1 to PIPE2/alu_result_out_EX_MEM_17
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             17   0.447   1.028  PIPE1/alusrc_out_ID_EXE_1 (PIPE1/alusrc_out_ID_EXE_1)
+     LUT3:I2->O            5   0.205   0.714  Mmux_rdata2_imm_ID_EXE321 (rdata2_imm_ID_EXE_9_OBUF)
+     DSP48A1:B9->P47      18   4.394   1.049  ALU0/Mmult_n0016 (ALU0/Mmult_n0016_P47_to_Mmult_n00161)
+     DSP48A1:C30->PCOUT47    1   2.689   0.000  ALU0/Mmult_n00161 (ALU0/Mmult_n00161_PCOUT_to_Mmult_n00162_PCIN_47)
+     DSP48A1:PCIN47->P14    1   2.264   0.580  ALU0/Mmult_n00162 (ALU0/n0016<31>)
+     LUT6:I5->O            3   0.205   0.000  ALU0/Mmux_out252 (aluout_31_OBUF)
+     FDR:D                     0.102          PIPE2/alu_result_out_EX_MEM_31
+    ----------------------------------------
+    Total                     13.677ns (10.306ns logic, 3.371ns route)
+                                       (75.4% logic, 24.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 1233 / 1233
+-------------------------------------------------------------------------
+Offset:              3.915ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       PIPE2/rdata2_out_EX_MEM_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to PIPE2/rdata2_out_EX_MEM_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O          1233   1.222   2.263  rst_IBUF (rst_IBUF)
+     FDR:R                     0.430          PIPE2/rdata2_out_EX_MEM_0
+    ----------------------------------------
+    Total                      3.915ns (1.652ns logic, 2.263ns route)
+                                       (42.2% logic, 57.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 3620574 / 514
+-------------------------------------------------------------------------
+Offset:              19.069ns (Levels of Logic = 8)
+  Source:            PIPE1/alusrc_out_ID_EXE_1 (FF)
+  Destination:       zero (PAD)
+  Source Clock:      clk rising
+
+  Data Path: PIPE1/alusrc_out_ID_EXE_1 to zero
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q             17   0.447   1.028  PIPE1/alusrc_out_ID_EXE_1 (PIPE1/alusrc_out_ID_EXE_1)
+     LUT3:I2->O            5   0.205   0.714  Mmux_rdata2_imm_ID_EXE321 (rdata2_imm_ID_EXE_9_OBUF)
+     DSP48A1:B9->P47      18   4.394   1.049  ALU0/Mmult_n0016 (ALU0/Mmult_n0016_P47_to_Mmult_n00161)
+     DSP48A1:C30->PCOUT47    1   2.689   0.000  ALU0/Mmult_n00161 (ALU0/Mmult_n00161_PCOUT_to_Mmult_n00162_PCIN_47)
+     DSP48A1:PCIN47->P2    1   2.264   0.580  ALU0/Mmult_n00162 (ALU0/n0016<19>)
+     LUT6:I5->O            3   0.205   1.015  ALU0/Mmux_out112 (aluout_19_OBUF)
+     LUT6:I0->O            1   0.203   0.924  ALU0/zero<31>6 (ALU0/zero<31>5)
+     LUT5:I0->O            1   0.203   0.579  ALU0/zero<31>7 (zero_OBUF)
+     OBUF:I->O                 2.571          zero_OBUF (zero)
+    ----------------------------------------
+    Total                     19.069ns (13.181ns logic, 5.889ns route)
+                                       (69.1% logic, 30.9% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   13.677|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 14.37 secs
+ 
+--> 
+
+Total memory usage is 284376 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   17 (   0 filtered)
+Number of infos    :   67 (   0 filtered)
+
