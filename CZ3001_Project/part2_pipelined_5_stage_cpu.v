@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
 `include "define.v"
 
-module pipelined_5_stage_cpu(
-    
+module part2_pipelined_5_stage_cpu(
+  
 
 clk, rst, fileid, PCOUT, INST, 
 rdata1, rdata2,aluout,zero,
@@ -103,6 +103,9 @@ wire memwrite;
 wire branch;
 wire memread;
 wire regdst;
+wire jr;
+wire jump;
+wire jal;
 
 //AND GATE FOR BRANCH
 wire pcsrc;
@@ -128,6 +131,14 @@ assign wdataMux= (memtoreg_MEM_WB==0) ? rdata_DM_out_MEM_WB: alu_result_MEM_WB;
 
 //mux for branch based on pcsrc control signal
 assign nPC = pcsrc ? res : PCIN;
+
+//part 2
+
+//mux
+wire [`ISIZE-1:0] jr_mux, jump_mux;
+wire [`ASIZE-1:0] jal_mux;
+
+
 
 PC1 pc(
 	.clk(clk),
@@ -173,7 +184,10 @@ control C0 (
 .branch_cntrl(branch),
 .memwrite_cntrl(memwrite),
 .MemRead_cntrl(memread),
-.MemToReg_cntrl(memtoreg)
+.MemToReg_cntrl(memtoreg),
+.jr_cntrl(jr),
+.jump_cntrl(jump),
+.jal_cntrl(jal)
 );
 
 
@@ -272,7 +286,5 @@ MEM_WB_stage PIPE3(
 		.WriteEn_out_MEM_WB(WriteEn_MEM_WB),
 		.rdata_DM_out_MEM_WB(rdata_DM_out_MEM_WB)
 );
-
-
 
 endmodule

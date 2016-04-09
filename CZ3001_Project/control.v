@@ -11,18 +11,26 @@ module control(
   output reg branch_cntrl,
   output reg  memwrite_cntrl,
   output reg  MemRead_cntrl,
-  output reg  MemToReg_cntrl
+  output reg  MemToReg_cntrl,
+  //part 2
+  output reg jr_cntrl,
+  output reg jump_cntrl,
+  output reg jal_cntrl
   );
   
   always@(inst_cntrl)
   begin
 		wen_cntrl=1;
-		alusrc_cntrl=0;
-		branch_cntrl=0;
-		regdst_cntrl=1;
-		MemRead_cntrl=0;
-		MemToReg_cntrl=1;
-		memwrite_cntrl=0;
+		alusrc_cntrl= 0;
+		branch_cntrl= 0;
+		regdst_cntrl= 1;
+		MemRead_cntrl= 0;
+		MemToReg_cntrl= 1;
+		memwrite_cntrl= 0;
+		//part 2
+		jr_cntrl= 0;
+		jump_cntrl= 0;
+		jal_cntrl= 0;
  
     case(inst_cntrl)
 			`ADD: begin

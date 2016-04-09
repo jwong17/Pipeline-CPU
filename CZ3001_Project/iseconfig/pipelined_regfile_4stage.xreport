@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-04-09T23:34:28</DateModified>
+  <DateModified>2016-04-10T00:25:32</DateModified>
   <ModuleName>pipelined_5_stage_cpu</ModuleName>
   <SummaryTimeStamp>2016-04-09T21:13:40</SummaryTimeStamp>
   <SavedFilePath>C:/Users/jwong048/Desktop/CZ3001_Project/iseconfig/pipelined_regfile_4stage.xreport</SavedFilePath>

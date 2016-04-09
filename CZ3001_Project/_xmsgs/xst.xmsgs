@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"C:\Users\jwong048\Desktop\CZ3001_Project\pipelined_5_stage_cpu.v" Line 167: Port <arg fmt="%s" index="1">jr_cntrl</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="295" delta="new" >"C:\Users\jwong048\Desktop\CZ3001_Project\memory.v" Line 37: case condition never applies
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="816" delta="new" >"C:\Users\jwong048\Desktop\CZ3001_Project\memory.v" Line 42: System function call <arg fmt="%s" index="1">feof</arg> not supported
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="817" delta="new" >"C:\Users\jwong048\Desktop\CZ3001_Project\memory.v" Line 55: System task <arg fmt="%s" index="1">fclose</arg> ignored for synthesis
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="295" delta="new" >"C:\Users\jwong048\Desktop\CZ3001_Project\dmemory.v" Line 57: case condition never applies
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="816" delta="new" >"C:\Users\jwong048\Desktop\CZ3001_Project\dmemory.v" Line 61: System function call <arg fmt="%s" index="1">feof</arg> not supported
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="817" delta="new" >"C:\Users\jwong048\Desktop\CZ3001_Project\dmemory.v" Line 74: System task <arg fmt="%s" index="1">fclose</arg> ignored for synthesis
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\jwong048\Desktop\CZ3001_Project\dmemory.v" Line 44: Assignment to <arg fmt="%s" index="1">addr_r</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="295" delta="new" >"C:\Users\jwong048\Desktop\CZ3001_Project\alu.v" Line 32: case condition never applies
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\jwong048\Desktop\CZ3001_Project\pipelined_5_stage_cpu.v</arg>&quot; line <arg fmt="%s" index="2">167</arg>: Output port &lt;<arg fmt="%s" index="3">jr_cntrl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">C0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\jwong048\Desktop\CZ3001_Project\pipelined_5_stage_cpu.v</arg>&quot; line <arg fmt="%s" index="2">167</arg>: Output port &lt;<arg fmt="%s" index="3">jump_cntrl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">C0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\jwong048\Desktop\CZ3001_Project\pipelined_5_stage_cpu.v</arg>&quot; line <arg fmt="%s" index="2">167</arg>: Output port &lt;<arg fmt="%s" index="3">jal_cntrl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">C0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">fileid</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">addr&lt;31:10&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">fileid</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">im/Mram_memory</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="info" file="Xst" num="3225" delta="new" >The RAM &lt;<arg fmt="%s" index="1">dm/Mram_memory</arg>&gt; will be implemented as BLOCK RAM
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">imm_out_ID_EXE_15</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">ID_EXE_stage</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">16 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;imm_out_ID_EXE_16&gt; &lt;imm_out_ID_EXE_17&gt; &lt;imm_out_ID_EXE_18&gt; &lt;imm_out_ID_EXE_19&gt; &lt;imm_out_ID_EXE_20&gt; &lt;imm_out_ID_EXE_21&gt; &lt;imm_out_ID_EXE_22&gt; &lt;imm_out_ID_EXE_23&gt; &lt;imm_out_ID_EXE_24&gt; &lt;imm_out_ID_EXE_25&gt; &lt;imm_out_ID_EXE_26&gt; &lt;imm_out_ID_EXE_27&gt; &lt;imm_out_ID_EXE_28&gt; &lt;imm_out_ID_EXE_29&gt; &lt;imm_out_ID_EXE_30&gt; &lt;imm_out_ID_EXE_31&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Mmult_n00163</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">alu</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2254" delta="new" >Area constraint could not be met for block &lt;<arg fmt="%s" index="1">pipelined_5_stage_cpu</arg>&gt;, final ratio is <arg fmt="%i" index="2">144</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1336" delta="new" > (*) More than 100% of Device resources are used
+</msg>
+
+</messages>
+
