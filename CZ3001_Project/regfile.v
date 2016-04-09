@@ -38,8 +38,11 @@ integer i;
 				begin
 					for (i=0; i<`NREG; i=i+1)
 					regdata[i] <=0;
+					regdata[1] <=1;
+					regdata[2] <=2;
+					regdata[3] <=3;
 					regdata[8] <=5;//hardcoding few values into register file for initialization
-					regdata[3] <=2;
+					regdata[10] <=4'b1000;
 
 				end
 			else

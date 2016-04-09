@@ -39,7 +39,7 @@ reg [`DSIZE-1:0] t_data;
 
 reg [`ISIZE-1:0] addr_r;
 
-assign data_out = memread ? memory[addr_r]: 16'b0;//Reading from the memory. Do note that there is a clock cycle delay for reading from the memory just to indicate that memories are slower.
+assign data_out = (memread==1) ? memory[addr]: 32'b0;//Reading from the memory. Do note that there is a clock cycle delay for reading from the memory just to indicate that memories are slower.
 
   always @(posedge clk)
     begin

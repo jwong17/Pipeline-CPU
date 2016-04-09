@@ -54,9 +54,9 @@ always @ (posedge clk) begin
 		waddr_out_ID_EXE <= 0;
 		rdata1_out_ID_EXE <= 0;
 		rdata2_out_ID_EXE <= 0;
-		imm_out_ID_EXE<=0;
-		opcode_out_ID_EXE<=0;
-		alusrc_out_ID_EXE<=0;
+		imm_out_ID_EXE <=0;
+		opcode_out_ID_EXE <=0;
+		alusrc_out_ID_EXE <=0;
 		memWrite_out_ID_EXE <= 0;
 		memRead_out_ID_EXE <= 0;
 		memToReg_out_ID_EXE<= 0;

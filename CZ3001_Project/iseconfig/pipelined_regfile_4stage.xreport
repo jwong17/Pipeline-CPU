@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2016-04-09T00:56:09</DateModified>
-  <ModuleName>pipelined_regfile_4stage</ModuleName>
-  <SummaryTimeStamp>Unknown</SummaryTimeStamp>
+  <DateModified>2016-04-09T23:34:28</DateModified>
+  <ModuleName>pipelined_5_stage_cpu</ModuleName>
+  <SummaryTimeStamp>2016-04-09T21:13:40</SummaryTimeStamp>
   <SavedFilePath>C:/Users/jwong048/Desktop/CZ3001_Project/iseconfig/pipelined_regfile_4stage.xreport</SavedFilePath>
   <ImplementationReportsDirectory>C:/Users/jwong048/Desktop/CZ3001_Project\</ImplementationReportsDirectory>
-  <DateInitialized>2016-04-07T15:24:09</DateInitialized>
+  <DateInitialized>2016-04-09T19:49:37</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
  <body>

@@ -19,7 +19,7 @@ module control(
 		wen_cntrl=1;
 		alusrc_cntrl=0;
 		branch_cntrl=0;
-		regdst_cntrl=0;
+		regdst_cntrl=1;
 		MemRead_cntrl=0;
 		MemToReg_cntrl=1;
 		memwrite_cntrl=0;
@@ -29,8 +29,6 @@ module control(
 					
 					alusrc_cntrl=0;
 					aluop_cntrl=inst_cntrl[2:0];
-					regdst_cntrl=1;
-					MemToReg_cntrl=1;
 			end
         `SUB: begin
                 
@@ -58,25 +56,28 @@ module control(
 					 alusrc_cntrl=0;
                 aluop_cntrl=inst_cntrl[2:0];
 			end
-		`ADDI: begin
+		  `ADDI: begin
                 
 					 alusrc_cntrl=1;
                 aluop_cntrl=inst_cntrl[2:0];
+					 regdst_cntrl=0;
         end
 		  `LW: begin
+					regdst_cntrl=0;
 					MemRead_cntrl=1;
 					MemToReg_cntrl=0;
 					alusrc_cntrl=1;
-					aluop_cntrl=3'b000;
+					aluop_cntrl=inst_cntrl[2:0];
 		  
 			end
 			
 		  `SW: begin
 					 wen_cntrl=0;
 					 alusrc_cntrl=1;
-                aluop_cntrl=3'b000;
-					 regdst_cntrl=1;
+                aluop_cntrl=inst_cntrl[2:0];
+					 regdst_cntrl=0;
 					 MemToReg_cntrl=0;
+					 memwrite_cntrl=1;
         end
 		  `BEQ: begin
 				wen_cntrl=0;

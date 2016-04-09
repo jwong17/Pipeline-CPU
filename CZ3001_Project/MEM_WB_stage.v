@@ -21,37 +21,41 @@
 //////////////////////////////////////////////////////////////////////////////////
 module MEM_WB_stage(
 		input  clk,  rst,
-		input [`DSIZE-1:0] alu_result_in,
+		input [`DSIZE-1:0] alu_result_in_MEM_WB,
+		input [`DSIZE-1:0] rdata_DM_in_MEM_WB,
 		//add inputs for control signals  
 		
-		input memToReg_in,
-		input [`ASIZE-1:0]waddr_in, 
-
-		//add outputs for control signals
-		output reg memToReg_out,
+		input memToReg_in_MEM_WB,
+		input [`ASIZE-1:0]waddr_in_MEM_WB, 
 		
-		output reg [`DSIZE-1:0] alu_result_out,
-		output reg[`ASIZE-1:0]waddr_out,
+		//add outputs for control signals
+		output reg memToReg_out_MEM_WB,
+		
+		output reg [`DSIZE-1:0] rdata_DM_out_MEM_WB,
+		output reg [`DSIZE-1:0] alu_result_out_MEM_WB,
+		output reg[`ASIZE-1:0]waddr_out_MEM_WB,
 	
 	//input and output for writeen signals
-	input WriteEn_in,
-	output reg WriteEn_out
+	input WriteEn_in_MEM_WB,
+	output reg WriteEn_out_MEM_WB
     );
 
 always @ (posedge clk) begin
 		if(rst)
 			begin
-				alu_result_out<=0;
-				waddr_out<=0;
-				memToReg_out<=0;
-				WriteEn_out<=0;
+				alu_result_out_MEM_WB<=0;
+				waddr_out_MEM_WB<=0;
+				memToReg_out_MEM_WB<=0;
+				WriteEn_out_MEM_WB<=0;
+				rdata_DM_out_MEM_WB<=0;
 			end
 	else
 			begin
-				alu_result_out<=alu_result_in;
-				waddr_out<=waddr_in;
-				memToReg_out<=memToReg_in;
-				WriteEn_out<=WriteEn_in;
+				alu_result_out_MEM_WB<=alu_result_in_MEM_WB;
+				waddr_out_MEM_WB<=waddr_in_MEM_WB;
+				memToReg_out_MEM_WB<=memToReg_in_MEM_WB;
+				WriteEn_out_MEM_WB<=WriteEn_in_MEM_WB;
+				rdata_DM_out_MEM_WB<=rdata_DM_in_MEM_WB;
 			end
 	
 	end

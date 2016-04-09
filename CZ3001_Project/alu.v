@@ -28,6 +28,8 @@ begin
        `COM: out = a<=b;
        `MUL: out = a*b;
        `ADDI: out = a+b;
+		 `LW: out = a + b;
+		 `SW: out = a + b;
 
 default: out = 0;  
    endcase
