@@ -1,1 +1,0 @@
-xst -intstyle ise -ifn "C:/Users/jwong048/Desktop/CZ3001_Project/pipelined_5_stage_cpu.xst" -ofn "C:/Users/jwong048/Desktop/CZ3001_Project/pipelined_5_stage_cpu.syr" 

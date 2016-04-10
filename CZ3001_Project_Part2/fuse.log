@@ -1,0 +1,37 @@
+Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Y:/CZ3001_Project_Part2/test_bench_pt2_5stage_pipelined_isim_beh.exe" -prj "Y:/CZ3001_Project_Part2/test_bench_pt2_5stage_pipelined_beh.prj" "work.test_bench_pt2_5stage_pipelined" "work.glbl" 
+ISim P.49d (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "Y:/CZ3001_Project_Part2/regfile.v" into library work
+Analyzing Verilog file "Y:/CZ3001_Project_Part2/PC.v" into library work
+Analyzing Verilog file "Y:/CZ3001_Project_Part2/MEM_WB_stage.v" into library work
+Analyzing Verilog file "Y:/CZ3001_Project_Part2/memory.v" into library work
+Analyzing Verilog file "Y:/CZ3001_Project_Part2/ID_EXEstage.v" into library work
+Analyzing Verilog file "Y:/CZ3001_Project_Part2/EX_MEM_stage.v" into library work
+Analyzing Verilog file "Y:/CZ3001_Project_Part2/dmemory.v" into library work
+Analyzing Verilog file "Y:/CZ3001_Project_Part2/control.v" into library work
+Analyzing Verilog file "Y:/CZ3001_Project_Part2/alu.v" into library work
+Analyzing Verilog file "Y:/CZ3001_Project_Part2/part2_pipelined_5_stage_cpu.v" into library work
+Analyzing Verilog file "Y:/CZ3001_Project_Part2/test_bench_pt2_5stage_pipelined.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.4/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module PC1
+Compiling module memory
+Compiling module dmemory
+Compiling module control
+Compiling module regfile
+Compiling module ID_EXE_stage
+Compiling module alu
+Compiling module EX_MEM_stage
+Compiling module MEM_WB_stage
+Compiling module part2_pipelined_5_stage_cpu
+Compiling module test_bench_pt2_5stage_pipelined
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 12 Verilog Units
+Built simulation executable Y:/CZ3001_Project_Part2/test_bench_pt2_5stage_pipelined_isim_beh.exe
+Fuse Memory Usage: 31688 KB
+Fuse CPU Usage: 795 ms

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "Y:/CZ3001_Project_Part2/test_bench_pt2_5stage_pipelined_isim_beh.exe" -prj "Y:/CZ3001_Project_Part2/test_bench_pt2_5stage_pipelined_beh.prj" "work.test_bench_pt2_5stage_pipelined" "work.glbl" 

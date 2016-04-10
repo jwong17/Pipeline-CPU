@@ -1,0 +1,28 @@
+Command line:
+   test_bench_pt2_5stage_pipelined_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  59031
+
+Mon Apr 11 05:11:50 2016
+
+
+ Elaboration Time: 0.078 sec
+
+ Current Memory Usage: 834.478 Meg
+
+ Total Signals          : 184
+ Total Nets             : 945
+ Total Signal Drivers   : 71
+ Total Blocks           : 12
+ Total Primitive Blocks : 10
+ Total Processes        : 84
+ Total Traceable Variables  : 85
+ Total Scalar Nets and Variables : 84506
+
+ Total Simulation Time: 0.234001 sec
+
+ Current Memory Usage: 834.478 Meg
+
+Mon Apr 11 05:15:19 2016
+
